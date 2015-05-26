@@ -414,7 +414,19 @@ svg path {
   .podrt_descr img {
     width: 100%;
     margin-top: 10px; }
-
+	.contact_box .fa {
+	margin:0px;
+	padding:0px;
+	}
+	.contact_box .fa{
+	list-style:none;
+	font-size:30px;
+	opacity: 0.5;
+	padding-bottom:10px;
+	}
+	.contact_box .fa:hover{
+	opacity: 1;
+	}
 .modal-box-content {
   position: relative; }
 
