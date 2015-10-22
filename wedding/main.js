@@ -7,7 +7,7 @@ $(document).ready(function(){
         $('.hours').text(event.strftime('%H:%M:%S'));
     } 
     else {
-        $('.message').text("Our wedding are in");
+        $('.message').text("Our wedding is in");
         $(this).text(
         event.strftime('%D days')
         )
