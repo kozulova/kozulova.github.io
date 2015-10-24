@@ -1,12 +1,20 @@
 body{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lobster', cursive;
+}
+.main_head{
     background: url(img/bg-4.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: 'Lobster', cursive;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
 }
-body:before{
+.main_head:before{
     content: '';
     width: 100%;
     height: 100%;
@@ -22,6 +30,10 @@ body:before{
     padding-top: 2%;
     opacity: 1;
     position: relative;
+}
+h2{
+    color: #e55564;
+    font-size: 30px;
 }
 .names{
     font-size: 65px;
@@ -43,6 +55,27 @@ body:before{
 .hours{
     font-size: 460%;
     text-align: left;
+}
+h2{
+    text-align: center;
+    margin: 0px;
+    padding: 20px 0;
+}
+section{
+    min-height: 500px;
+    background-image: url('https://wp-themes.com/wp-content/themes/lovebirds/img/background.png');
+    background-repeat: repeat;
+    background-position: top left;
+    background-attachment: scroll;
+    color: #e55564;
+}
+.text{
+    text-align: center;
+}
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
 }
 @media screen and (max-width: 1000px) {
     .hours{
