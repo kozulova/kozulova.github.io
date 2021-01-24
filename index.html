@@ -1,499 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Valentyna Kozulova | Wordpress developer</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" href="favicon.png" />
-	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
-	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
-	<link rel="stylesheet" href="libs/linea/styles.css" />
-	<link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css" />
-	<link rel="stylesheet" href="libs/animate/animate.min.css" />
-	<link rel="stylesheet" href="css/fonts.css" />
-	<link rel="stylesheet" href="css/main.css" />
-	<link rel="stylesheet" href="css/skins/purple.css" />
-	<link rel="stylesheet" href="css/media.css" />
-	<link rel="icon" type="image/vnd.microsoft.icon" href="img/favi.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<style>
+    body{
+        font-family: 'Roboto Slab', serif;
+        color: #999;
+        padding: 0;
+        margin: 0;
+    }
+    header{
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        border-radius: 3px;
+        text-transform: none;
+        color: #fff;
+        background-image: url("images/profile-bg.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 200px;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 30px;
 
+    }
+    nav i{
+        font-size: 30px;
+        padding-left: 10px;
+        color: #fff;
+    }
+    .content{
+        margin: -60px 30px 0px;
+        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        text-align: center;
+        z-index: 3;
+        position: relative;
+        background: #FFFFFF;
+        top: -60px;
+        padding-bottom: 40px;  
+    }
+    .inner_text{
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+        top: -60px;
+    }
+    .profile_img{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 160px;
+        border-radius: 50%;
+    }
+    h3{
+        color: #3C4858;
+    }
+    h6{
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.75rem;
+        color: #3C4858;
+    }
+    .socials a{
+        font-size: 20px;
+        color: #3C4858;
+    }
+    .socials i:first-child{
+        padding-right: 20px;
+    }
+    p{
+        font-size: 14px;
+        font-weight: 200;
+    }
+    .tabs{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    .tablinks{
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: uppercase;
+        background-color:#fff;
+        border: none;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        transition: 0.3s;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .tablinks i{
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+    button:focus{
+        outline: none; 
+    }
+    button.active{
+        color: #FFFFFF;
+        box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+        background-color: #9c27b0;
+    }
+    .tabcontent{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    .tab_column{
+        flex: 50%;
+        padding: 0 4px;
+    }
+    .tab_column img{
+        max-width: 200px;
+    }
+    .tab_column img{
+        margin-top: 8px;
+        vertical-align: middle;
+    }
+    .tabcontent:nth-child(2){
+        display: none;
+    }
+    footer{
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+
+</style>
 </head>
 <body>
-	
-	<div class="loader">
-		<div class="loader_inner"></div>
-	</div>
-
-	<header class="main_head main_color_bg" data-parallax="scroll" data-image-src="img/bg.jpg" data-z-index="1">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="logo_container">
-					<img src="img/logo.png">
-				</div>
-				<button class="toggle_mnu">
-					<span class="sandwich">
-						<span class="sw-topper"></span>
-						<span class="sw-bottom"></span>
-						<span class="sw-footer"></span>
-					</span>
-				</button>
-				<nav class="top_mnu">
-					<ul>
-						<li><a href="#about">About me</a></li>
-						<li><a href="#resume">Resume</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-						<li><a href="#contacts">Contacts</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
-	<div class="top_wrapper">
-		<div class="top_descr">
-			<div class="top_centered">
-				<div class="top_text">
-					<h1>Valentyna Kozulova</h1>
-					<p>Expert Web Developer / Project manager</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-<section id="about" class="s_about bg_light">
-	<div class="section_header">
-		<h2>About me</h2>
-		<div class="s_descr_wrap">
-			<div class="s_descr">Let's take a closer look</div>
-		</div>
-	</div>
-	<div class="section_content">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4 col-md-push-4 animation_1">
-					<h3>Foto</h3>
-					<div class="person">
-						<a href="img/photo.jpg" class="popup"><img src="img/photo.jpg" alt="Alt" /></a>
-					</div>
-				</div>
-				<div class="col-md-4 col-md-pull-4 animation_2">
-					<h3>Few words about me</h3>
-					<p>I treat every project as my personal and every client as a friend, so I always do my best to perform tasks with top-notch results. I always keep communication clear and build friendly relationship with every client.</p>
-					<p>I have high knowledge of PHP, HTML5/CSS3(SASS, LESS), JavaScript / jQuery, SQL.</p>
-					<p>I can build a custom site from scratch using WordPress CMS or Laravel framework. Also, I use Bootstrap 3/4, ReactJS.</p>
-					<p>I have 5 years experience in managing of web developing team</p>
-				</div>
-				<div class="col-md-4 animation_3 personal_last_block">
-					<h3>Personal information</h3>
-					<h2 class="personal_header">Valentyna Kozulova</h2>
-					<ul>
-						<li>I have been working in developing for over 5 years, my main specialization is a full-stack website development. I know how to make fast, secure, good looking and easy to manage website for you.</li>
-						<li>Birth day: 17 July 1990 year</li>
-						<li>E-mail: <a href="ValentynaKozulova@gmail.com">ValentynaKozulova@gmail.com</a></li>
-						<li>Portfolio site: <a href="http://kozulova.github.io/" target="_blank">kozulova.github.io</a></li>
-						<li>Upwork profile: <a href="https://www.upwork.com/freelancers/~017f160b0eec117b53" target="_blank">https://www.upwork.com/freelancers/~017f160b0eec117b53</a></li>						
-					</ul>
-					<div class="social_wrap">
-						<ul>
-							<li><a href="https://www.facebook.com/benedukvalia" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="https://github.com/kozulova" target="_blank"><i class="fa fa-github"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="resume" class="s_resume">
-	<div class="section_header">
-		<h2>Resume</h2>
-		<div class="s_descr_wrap">
-			<div class="s_descr">My education and jobs</div>
-		</div>
-	</div>
-	<div class="section_content">
-		<div class="container">
-			<div class="row">
-				<div class="resume_container">
-					<div class="col-md-6 col-sm-6 left">
-						<h3>Jobs</h3>
-						<div class="resume_icon"><i class="icon-basic-case"></i></div>
-							<div class="resume_item">
-							<div class="year">June 2015 - Current</div>
-							<div class="resume_description"><a href="https://www.upwork.com/users/~017f160b0eec117b53/" target="_blank">Upwork.com</a><strong>Freelancer</strong></div>
-							<p>I worked as full time freelancer during 2015 year and came back to freeelancing starting from 2019. I will be happy to help you with all kind of web developing tasks. Feel free to contact me via Upwork, social medias or email.</p>
-						</div>
-						<div class="resume_item">
-							<div class="year">March 2017 - Current</div>
-							<div class="resume_description"><a href="https://softserveinc.com" target="_blank">SoftServe</a><strong>Project manager</strong></div>
-							<p>I worked as Project manager for Ukraine based outsorsing company SoftServe. I've managed project teams, communicated clients, collected and analized project metrics, organized project staffing.</p>
-						</div>						
-						<div class="resume_item">
-							<div class="year">April 2014 – May 2015  (1 year)</div>
-							<div class="resume_description"><a href="http://www.joyrocks.com/" target="_blank">JoyRocks</a><strong>Product manager</strong></div>
-							<p>I had such responsibilities: Games specifications writing, marketing plans writing, planning of special game currency offers, Creating of new parts of game history, Writing of quests and counting of  balance in social free to play farm type game, Analysis of data for making new decisions in game developing, Managing of game developing tasks of art, content and programing departments
-							</p>
-						</div>
-						<div class="resume_item">
-							<div class="year">January 2012 – April 2014 (2 years)</div>
-							<div class="resume_description"><a href="http://soft-group.com/" target="_blank">SoftGroup</a><strong>Project manager</strong></div>
-						<p>I had such responsibilities: Managing of websites creating process Projects specifications and projects plans writing Organization, coordination and verification of web designers, web programmers and content managers work
-						</p>
-						</div>
-					</div>
-					<div class="col-md-6 col-sm-6 right">
-						<h3>Education</h3>
-						<div class="resume_icon"><i class="icon-basic-book-pen"></i></div>
-						<div class="resume_item">
-							<div class="year">June 2017</div>
-							<div class="resume_description"><strong>QA Test Lab traning</strong><a href="http://training.qatestlab.com/">QA Test Lab</a></div>
-							<p>I've learned basic of software automation testing.</p>
-						</div>
-							<div class="resume_item">
-							<div class="year">June 2015-September 2015</div>
-							<div class="resume_description"><strong>IT academy</strong><a href="https://softserve.ua/university/it-academy/">Soft Serve</a></div>
-							<p>During education we worked with real project in team. We were studying development, design and arhitecture of modern software systems based on object-oriented languages</p>
-						</div>
-						<div class="resume_item">
-							<div class="year">2005-Always in progress</div>
-							<div class="resume_description"><strong>Self study</strong></div>
-							<p>I've studied how to program on PHP, Javascript, how to make different sites on Wordpress</p>
-						</div>
-						<div class="resume_item">
-							<div class="year">2007-2012</div>
-							<div class="resume_description"><strong>Master Degree in Economic Cybernetics</strong> <a href="http://www.oa.edu.ua/">"Ostrog Academy" National University</a></div>
-							<p>I've learned how to use  information systems in the management of economic subjects and how to make computer modeling of economic systems and processes</p>
-						</div>
-						<div class="resume_item">
-							<div class="year">2005-2007</div>
-							<div class="resume_description"><strong>Computer specialist</strong><a href="http://www.mctum.rv.ua/st_pc_user.php">Rivne town center of creative youth</a></div>
-							<p>I've learned main computer skills, learned Photoshop, html, css, programing basics. </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="portfolio" class="s_portfolio bg_dark">
-	<div class="section_header">
-		<h2>Portfolio</h2>
-		<div class="s_descr_wrap">
-			<div class="s_descr">My last works</div>
-		</div>
-	</div>
-	<div class="section_content">
-		<div class="container">
-			<div class="row">
-				<div class="filter_div controls">
-					<ul>
-						<li class="filter active" data-filter="all">All works</li>
-						<li class="filter" data-filter=".category-1">Freelancer</li>
-						<li class="filter" data-filter=".category-2">Soft Group Project manager</li>
-						<li class="filter" data-filter=".category-3">Joyrocks Product manager</li>
-					</ul>
-				</div>
-				<div id="portfolio_grid">
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">
-						<img src="img/portfolio-images/bawl.png" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>BAWL</h3>
-							<p>Laravel, Backbone, Bootstrap are used in developing. Project were developed in team with 5 other programmers.</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>BAWL</h3>
-									<p>Citizen of Rivne will be able to leave their comments about some problems in the town on the map, discuss theme and control their solving process. Laravel, Backbone, Bootstrap are used in developing. Project were developed in team with 5 other programmers. Link on project sources on GitHub https://github.com/Michaluch/Rv011PHP.git</p>
-									<img src="img/portfolio-images/bawl.png" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">
-						<img src="img/portfolio-images/dude.png" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Designingdude.com</h3>
-							<p>HTML to Wordpress, HTML to Responsive</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Designingdude.com</h3>
-									<p>HTML to Wordpress, HTML to Responsive</p>
-									<img src="img/portfolio-images/dude.png" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>					
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">
-						<img src="img/portfolio-images/10.png" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>CrossFitWorksopBlog.com</h3>
-							<p>Choosing and setting of template, implementation on Wordpress, access with  authorization to some blog parts</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>CrossFitWorksopBlog.com</h3>
-									<p>Choosing and setting of template, implementation on Wordpress, access with  authorization to some blog parts</p>
-									<img src="img/portfolio-images/10.png" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">
-						<img src="img/portfolio-images/1.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Let Us make</h3>
-							<p>PSD to HTML and implementation on Wordpress</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Let Us make</h3>
-									<p>PSD to HTML and implementation on Wordpress</p>
-									<img src="img/portfolio-images/1.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">
-						<img src="img/portfolio-images/9.png" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>IcanGetOut.com</h3>
-							<p>Creation of template and implementation on Wordpress</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>IcanGetOut.com</h3>
-									<p>Creation of template and implementation on Wordpress</p>
-									<img src="img/portfolio-images/9.png" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">
-						<img src="img/portfolio-images/2.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>LookShop</h3>
-							<p>PSD to HTML, embedding of scripts</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>LookShop</h3>
-									<p>PSD to HTML, embedding of scripts.</p>
-									<img src="img/portfolio-images/2.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-1">
-						<img src="img/portfolio-images/3.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Choose Travel</h3>
-							<p>PSD to HTML, embedding of scripts and implementation on Wordpress</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Choose Travel</h3>
-									<p>PSD to HTML, embedding of scripts and implementation on Wordpress.</p>
-									<img src="img/portfolio-images/3.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-2">
-						<img src="img/portfolio-images/4.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Essay writing services</h3>
-							<p>Managing of site developing process</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Essay writing services</h3>
-									<p>Managing of site developing process</p>
-									<img src="img/portfolio-images/4.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-2">
-						<img src="img/portfolio-images/6.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>SEO services website</h3>
-							<p>Managing of site redesign process</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>SEO services website</h3>
-									<p>Managing of site redesign process.</p>
-									<img src="img/portfolio-images/6.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-2">
-						<img src="img/portfolio-images/5.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Resume writing services</h3>
-							<p>Managing of site developing process</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Resume writing services</h3>
-									<p>Managing of site developing process</p>
-									<img src="img/portfolio-images/5.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-3">
-						<img src="img/portfolio-images/7.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Droll Raccoon</h3>
-							<p>Product manager of social free to play farm type game in different social networks</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Droll Raccoon</h3>
-									<p>Product manager of social free to play farm type game in different social networks</p>
-									<img src="img/portfolio-images/7.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="mix col-md-3 col-sm-6 col-xs-12 portfolio_item category-3">
-						<img src="img/portfolio-images/8.jpg" alt="Alt" />
-						<div class="port_item_cont">
-							<h3>Bird’s Town</h3>
-							<p>Product manager of social free to play farm type game in different social networks</p>
-							<a href="#" class="popup_content">Watch</a>
-						</div>
-						<div class="hidden">
-							<div class="podrt_descr">
-								<div class="modal-box-content">
-									<button class="mfp-close" type="button" title="Закрыть (Esc)">×</button>
-									<h3>Bird’s Town</h3>
-									<p>Product manager of social free to play farm type game in different social networks</p>
-									<img src="img/portfolio-images/8.jpg" alt="Alt" />
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section id="contacts" class="s_contacts bg_light">
-	<div class="section_header">
-		<h2>Contacts</h2>
-		<div class="s_descr_wrap">
-			<div class="s_descr">Leave your message</div>
-		</div>
-	</div>
-	<div class="section_content">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-6">
-					<div class="contact_box">
-						<div class="contacts_icon icon-basic-geolocalize-05"></div>
-						<h3>Addres:</h3>
-						<p>Rivne, Ukraine</p>
-					</div>
-					<div class="contact_box">
-						<div class="contacts_icon icon-basic-smartphone"></div>
-						<h3>Phone:</h3>
-						<p>+38 098 876 28 34</p>
-					</div>
-					<div class="contact_box">
-						<div class="contacts_icon icon-basic-webpage-img-txt"></div>
-						<h3>Web site:</h3>
-						<p><a href="http://kozulova.github.io" target="_blank">kozulova.github.io</a></p>
-					</div>
-						<div class="contact_box">
-						<a href="https://www.facebook.com/benedukvalia" target="_blank"><i class="fa fa-facebook"></i></a>
-						<p><a href="https://www.facebook.com/benedukvalia" target="_blank">https://www.facebook.com/benedukvalia</a></p>
-					</div>
-						<div class="contact_box">
-						<a href="https://github.com/ValentynaBen" target="_blank"><i class="fa fa-github"></i></a>
-						<p><a href="https://github.com/kozulova" target="_blank">https://github.com/kozulova</a></p>
-						</div>
-					</ul>
-				</div>
-				<div class="col-md-6 col-sm-6">
-			<iframe src="https://docs.google.com/forms/d/11dTxGJwsAGW5EqVirSFjuJhzBn0kvx0mj8oMvTGFPaI/viewform?embedded=true" width="600" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<footer class="main_footer bg_dark">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				&copy; 2019 Valentyna Kozulova
-				<div class="social_wrap">
-					<ul>
-							<li><a href="https://www.facebook.com/benedukvalia" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="https://github.com/kozulova" target="_blank"><i class="fa fa-github"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</footer>
-
-<div class="hidden"></div>
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
-	
-	<script src="libs/jquery/jquery-2.1.3.min.js"></script>
-	<script src="libs/parallax/parallax.min.js"></script>
-	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
-	<script src="libs/mixitup/mixitup.min.js"></script>
-	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
-	<script src="libs/waypoints/waypoints.min.js"></script>
-	<script src="libs/animate/animate-css.js"></script>
-	<script src="libs/jqBootstrapValidation/jqBootstrapValidation.js"></script>
-	<script src="js/common.js"></script>
+    <header>
+        <div class="logo">Valentyna</div>
+        <nav>
+            <a href="https://www.facebook.com/benedukvalia"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://github.com/kozulova"><i class="fab fa-github-square"></i></a>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="inner_text">
+        <img class="profile_img" src="images/vk.jpg" alt="">
+        <h3>Valentyna Kozulova</h3>
+        <h6>Fullstack js developer</h6>
+        <div class="socials">
+            <a href="https://www.facebook.com/benedukvalia"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://github.com/kozulova"><i class="fab fa-github-square"></i></a>
+            <a href="https://github.com/https://www.linkedin.com/in/valentina-kozulova-benediuk-4360676b/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.upwork.com/freelancers/~017f160b0eec117b53" style="text-decoration: none;">Up</a>
+        </div>
+        <p>
+            I am full-stack javascript developer who knows how to make fast, secure, good looking and easy to manage application for you.
+        </p>
+        <p>
+            My spesializations are: Html/css, javascript, PHP, Python, React, React Native, Nodejs, Express, Wordpress, Jest, CI/CD.
+        </p>
+        </div>
+        <div class="tabs">
+            <button class="tablinks active" onclick="openTab(event, 'works')"><i class="fas fa-briefcase"></i>Works</button>
+            <button class="tablinks" onclick="openTab(event, 'certificates')"><i class="fas fa-certificate"></i>Certificates</button>
+        </div>
+        <div>
+        <div id="works" class="tabcontent">
+            <div class="tab_column">
+                <a href="https://github.com/kozulova/js/tree/master/flex"><img src="images/works/flex_websitepng.png" alt=""></a>
+                <a href="https://github.com/kozulova/js/tree/master/game"><img src="images/works/gamejpg.jpg" alt=""></a>   
+            </div>
+            <div class="tab_column">
+                <a href="https://github.com/kozulova/js/tree/master/countries"><img src="images/works/countries.jpg" alt=""></a>
+                <a href="https://github.com/kozulova/js/tree/master/SRP-game"><img src="images/works/rsp.jpg" alt=""></a>
+            </div>   
+        </div>
+        <div id="certificates" class="tabcontent">
+            <div class="tab_column">
+                <a href="https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/ffe963b296890885d2e53f2fd058779e"><img src="images/certf/certificate-fullstack.png" alt=""></a>
+                <a href="https://cs50.harvard.edu/certificates/ab2eaa37-5b6c-4042-8825-9ef65a96efa6" target="_blank"><img src="images/certf/python_cs50.jpg" alt=""></a>
+                <a href="https://freecodecamp.org/certification/fcc42ffdafe-60d1-4639-9ec0-c3e06d7f6cec/full-stack"><img src="images/certf/fcc.jpg" alt=""> </a>
+            </div>
+            <div class="tab_column">
+                <a href="https://courses.prometheus.org.ua:18090/cert/ed63ae8649f1470383b3c5897f4b34f4" target="_blank"><img src="images/certf/cs50jpg.jpg" alt=""></a>
+                <a href="https://studies.cs.helsinki.fi/stats/api/certificate/fs-cicd/en/75898b71de919324b201caa86e072e28"><img src="images/certf/ci_cd_cert.png" alt=""></a>
+                <a href="https://studies.cs.helsinki.fi/stats/api/certificate/fs-react-native-2020/en/6f6808f13f9a274df76013839fcdbea4"><img src="images/certf/certificate-reactnative.png" alt=""></a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <footer>
+        <div class="copy">© 2021 , made by Valentyna.</div>
+    </footer>
+    <script>
+        function openTab(event, tab){          
+            let tabcontent = document.getElementsByClassName("tabcontent");
+            let tablinks = document.getElementsByClassName('tablinks')
+            let i = 0;
+            for(i = 0; i<tabcontent.length; i++){
+                tabcontent[i].style.display = "none";
+            }
+            for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tab).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>
