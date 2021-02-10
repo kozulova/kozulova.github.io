@@ -144,6 +144,46 @@
         padding-bottom: 30px;
     }
 
+    .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
 </style>
 </head>
 <body>
@@ -162,14 +202,14 @@
         <div class="socials">
             <a href="https://www.facebook.com/benedukvalia"><i class="fab fa-facebook-square"></i></a>
             <a href="https://github.com/kozulova"><i class="fab fa-github-square"></i></a>
-            <a href="https://github.com/https://www.linkedin.com/in/valentina-kozulova-benediuk-4360676b/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/valentina-kozulova-benediuk-4360676b/"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.upwork.com/freelancers/~017f160b0eec117b53" style="text-decoration: none;">Up</a>
         </div>
         <p>
             I am full-stack javascript developer who knows how to make fast, secure, good looking and easy to manage application for you.
         </p>
         <p>
-            My spesializations are: Html/css, javascript, PHP, Python, React, React Native, Nodejs, Express, Wordpress, Jest, CI/CD.
+            My spesializations are: Javascript, Html/css, PHP, Python, React, React Native, Nodejs, Express, Wordpress, Jest, CI/CD.
         </p>
         </div>
         <div class="tabs">
